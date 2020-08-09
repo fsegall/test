@@ -3,14 +3,14 @@ services:
   - docker
 
 script:
-  - docker build -t <dockeruser/nameofproject> .
-  - docker images <dockeruser/nameofproject>
+  - docker build -t fsegall/nodeCI .
+  - docker images fsegall/nodeCI
 
-before_deploy:
-  - docker login -u <username>  -p <userpassword>
+# before_deploy:
+#   - docker login -u <username>  -p <userpassword>
 
-deploy:
-  provider: script
-  script: docker push <dockeruser/nameofproject>
-  on:
-    branch: master
+# deploy:
+#   provider: script
+#   script: docker push fsegall/nodeCI
+#   on:
+#     branch: master
