@@ -3,8 +3,8 @@ services:
   - docker
 
 script:
-  - docker build -t fsegall/nodeCI .
-  - docker images fsegall/nodeCI
+  - docker build -t fsegall/node-ci .
+  - docker images fsegall/node-ci
 
 # before_deploy:
 #   - docker login -u <username>  -p <userpassword>
