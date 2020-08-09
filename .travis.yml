@@ -6,11 +6,11 @@ script:
   - docker build -t fsegall/node-ci .
   - docker images fsegall/node-ci
 
-# before_deploy:
-#   - docker login -u <username>  -p <userpassword>
+before_deploy:
+  - docker login -u fsegall  -p docker-password 
 
-# deploy:
-#   provider: script
-#   script: docker push fsegall/nodeCI
-#   on:
-#     branch: master
+deploy:
+  provider: script
+  script: docker push fsegall/node-ci
+  on:
+    branch: master
