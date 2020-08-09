@@ -2,14 +2,14 @@ sudo: required
 services:
   - docker
 
-before_script: echo $docker-password
+before_script: echo $password
 
 script:
   - docker build -t fsegall/node-ci .
   - docker images fsegall/node-ci
 
 before_deploy:
-  - docker login -u fsegall -p $docker-password 
+  - docker login -u fsegall -p $password 
 
 deploy:
   provider: script
