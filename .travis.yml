@@ -7,7 +7,7 @@ script:
   - docker images fsegall/node-ci
 
 before_deploy:
-  - docker login -u fsegall  -p docker-password 
+  - docker login -u fsegall -p $docker-password 
 
 deploy:
   provider: script
